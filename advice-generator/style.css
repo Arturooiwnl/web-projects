@@ -1,0 +1,290 @@
+
+:root {
+    --lightCyan: rgb(206, 227, 233);
+    --neonGreen: rgb(82, 255, 168);
+    --opaqueBlue: rgb(78, 93, 115); 
+    --darkOpaqueBlue: rgb(50, 58, 73);
+    --darkBlue: rgb(31, 38, 50);
+    --fontFamily: 'Manrope', sans-serif;
+    --fontSizeQuote: 28px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--darkBlue);
+    font-family: var(--fontFamily);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.github-link {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    fill: var(--lightCyan);
+    transition: fill 0.3s ease;
+}
+
+.github-link:hover {
+    fill: var(--neonGreen);
+}
+
+.advice-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 540px;
+}
+
+.advice-card {
+    background-color: var(--darkOpaqueBlue);
+    border-radius: 15px;
+    padding: 48px 48px 64px; 
+    text-align: center;
+    position: relative; 
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.advice-id {
+    color: var(--neonGreen);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 13px; 
+    margin-bottom: 24px;
+}
+
+.advice-text {
+    color: var(--lightCyan);
+    font-size: var(--fontSizeQuote);
+    line-height: 1.4;
+    margin-bottom: 40px; 
+    min-height: 80px; 
+}
+
+.divider{
+    margin-bottom: 30px; 
+    display: flex;
+    justify-content: center;
+}
+
+.divider svg {
+   width: 90%; 
+   max-width: 444px; 
+}
+
+
+.dice-button {
+    background-color: var(--neonGreen);
+    border: none;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    bottom: -32px; 
+    left: 50%;
+    transform: translateX(-50%);
+    transition: box-shadow 0.3s ease;
+}
+
+.dice-button:hover {
+    box-shadow: 0 0 20px var(--neonGreen);
+}
+
+.dice-button svg path {
+    fill: var(--darkBlue); 
+}
+
+@media (max-width: 600px) {
+    .advice-card {
+        padding: 30px 25px 55px; 
+    }
+
+    .advice-text {
+        font-size: 24px; 
+        margin-bottom: 30px;
+    }
+
+    .dice-button {
+        width: 55px;
+        height: 55px;
+        bottom: -27.5px;
+    }
+}
+
+:root {
+    --lightCyan: rgb(206, 227, 233);
+    --neonGreen: rgb(82, 255, 168);
+    --opaqueBlue: rgb(78, 93, 115);
+    --darkOpaqueBlue: rgb(50, 58, 73);
+    --darkBlue: rgb(31, 38, 50);
+    --fontFamily: 'Manrope', sans-serif;
+    --fontSizeQuote: 28px; 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 100%; 
+}
+
+body {
+    background-color: var(--darkBlue);
+    font-family: var(--fontFamily);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem; 
+}
+
+.github-link {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    color: var(--lightCyan);
+    transition: color 0.3s ease;
+}
+
+.github-link:hover,
+.github-link:focus {
+    color: var(--neonGreen);
+    outline: none; 
+}
+
+.advice-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 540px; 
+}
+
+.advice-card {
+    background-color: var(--darkOpaqueBlue);
+    border-radius: 15px;
+    padding: 3rem 3rem 4rem; 
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.25);
+    width: 100%; 
+}
+
+.advice-id {
+    color: var(--neonGreen);
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-size: 0.8125rem; 
+    margin-bottom: 1.5rem; 
+}
+
+.advice-text {
+    color: var(--lightCyan);
+    font-size: var(--fontSizeQuote);
+    line-height: 1.4;
+    margin-bottom: 2.5rem;
+    min-height: 5rem; 
+    transition: opacity 0.3s ease-in-out;
+}
+
+.advice-text.loading {
+    opacity: 0.5; 
+}
+
+
+.divider {
+    display: block;
+    margin-bottom: 2.5rem; 
+    line-height: 0; 
+}
+
+.divider img,
+.divider source {
+   max-width: 100%;
+   height: auto;
+   display: block; 
+   margin: 0 auto; 
+}
+
+
+.dice-button {
+    background-color: var(--neonGreen);
+    border: none;
+    border-radius: 50%;
+    width: 4rem; 
+    height: 4rem; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: box-shadow 0.3s ease;
+    color: var(--darkBlue);
+}
+
+.dice-button:hover,
+.dice-button:focus {
+    box-shadow: 0 0 25px var(--neonGreen);
+    outline: none;
+}
+
+.dice-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+@media (max-width: 599px) {
+    :root {
+       --fontSizeQuote: 1.5rem;
+    }
+    .advice-card {
+        padding: 2rem 1.5rem 3.5rem; 
+    }
+
+    .advice-id {
+        font-size: 0.75rem; 
+        letter-spacing: 0.2em;
+    }
+
+    .advice-text {
+        margin-bottom: 1.875rem; 
+    }
+
+     .divider {
+        margin-bottom: 2rem;
+    }
+
+    .dice-button {
+        width: 3.5rem; 
+        height: 3.5rem;
+        bottom: -1.75rem; 
+    }
+}
+
+/* 
+
+css, html, js vanilla :)
+
+by https://dev.arturoiwnl.pro/
+
+*/

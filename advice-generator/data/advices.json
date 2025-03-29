@@ -1,0 +1,43 @@
+
+[
+    {
+        "id": 1,
+        "advice": "No temas cometer errores, son oportunidades para aprender."
+    },
+    {
+        "id": 2,
+        "advice": "La paciencia y la constancia son claves para alcanzar tus metas."
+    },
+    {
+        "id": 3,
+        "advice": "Escucha más de lo que hablas, siempre hay algo nuevo por aprender."
+    },
+    {
+        "id": 4,
+        "advice": "Organiza tu tiempo y prioriza lo importante, no lo urgente."
+    },
+    {
+        "id": 5,
+        "advice": "Rodéate de personas que te inspiren y te impulsen a ser mejor."
+    },
+    {
+        "id": 6,
+        "advice": "Cuida tu salud física y mental, son tu mayor tesoro."
+    },
+    {
+        "id": 7,
+        "advice": "Sé amable contigo mismo, el progreso lleva tiempo."
+    },
+    {
+        "id": 8,
+        "advice": "Nunca dejes de soñar, pero trabaja duro para hacer tus sueños realidad."
+    },
+    {
+        "id": 9,
+        "advice": "Aprende a decir 'no' cuando sea necesario para proteger tu bienestar."
+    },
+    {
+        "id": 10,
+        "advice": "La gratitud transforma lo que tienes en suficiente."
+    }
+]
