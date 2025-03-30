@@ -13,12 +13,45 @@
 
 
     </head>
-<body>
-    
-    <main>
-        <section id="store" class="store-container"></section>
-    </main>
+    <body>
+        <header class="store-header">
+            <h1>Nuestros Productos</h1>
 
-    <script type="module" src="getProductsData.js"></script>
-</body>
-</html>
+            <form id="category-form">
+                <label for="category-select">Selecciona una categoría:</label>
+                <select id="category-select" name="category"></select>
+            </form>
+
+        </header>
+        
+
+
+        <main class="container">
+            <div class="products-grid" id="store">
+            </div>
+        </main>
+    
+        <script type="module" src="script.js"></script>
+        <!-- <script>
+
+        const categories = ["electronics", "jewelery", "men's clothing", "women's clothing"];
+            const categoryNames = {
+                "electronics": "Electrónica",
+                "jewelery": "Joyería",
+                "men's clothing": "Ropa de Hombre",
+                "women's clothing": "Ropa de Mujer"
+            };
+
+            const selectElement = document.getElementById("category-select");
+
+            categories.forEach(category => {
+                const option = document.createElement("option");
+                option.value = category;
+                option.textContent = categoryNames[category] || category;
+                selectElement.appendChild(option);
+            });
+
+
+        </script> -->
+    </body>
+    </html>
