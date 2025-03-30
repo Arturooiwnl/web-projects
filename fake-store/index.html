@@ -12,19 +12,21 @@
         <link rel="stylesheet" href="style.css">
 
 
+
+
     </head>
     <body>
         <header class="store-header">
-            <h1>Nuestros Productos</h1>
-
-            <form id="category-form">
+            <h1>Fake Store</h1>
+            <div class="cart">
+                <img src="assets/images/cart.svg" alt="carrito de compras"> <span class="cart-counter">0</span>
+            </div>
+            <form id="category-form" class="category-form">
                 <label for="category-select">Selecciona una categoría:</label>
-                <select id="category-select" name="category"></select>
+                <select class="category-selector" id="category-select" name="category"></select>
             </form>
 
         </header>
-        
-
 
         <main class="container">
             <div class="products-grid" id="store">
@@ -32,26 +34,5 @@
         </main>
     
         <script type="module" src="script.js"></script>
-        <!-- <script>
-
-        const categories = ["electronics", "jewelery", "men's clothing", "women's clothing"];
-            const categoryNames = {
-                "electronics": "Electrónica",
-                "jewelery": "Joyería",
-                "men's clothing": "Ropa de Hombre",
-                "women's clothing": "Ropa de Mujer"
-            };
-
-            const selectElement = document.getElementById("category-select");
-
-            categories.forEach(category => {
-                const option = document.createElement("option");
-                option.value = category;
-                option.textContent = categoryNames[category] || category;
-                selectElement.appendChild(option);
-            });
-
-
-        </script> -->
     </body>
     </html>
