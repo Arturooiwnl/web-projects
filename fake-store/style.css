@@ -295,8 +295,98 @@ body {
     }
 }
 
+.modal-cart-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeIn 0.3s ease-in-out;
+    position: relative;
+    overflow: auto;
+    max-height: 600px;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.modal-cart-product-image {
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.modal-cart-product-image img {
+    height: 70px;
+    width: 70px;
+    object-fit: fill;
+    border-radius: 8px;
+}
+
+.modal-cart-product-info {
+    flex: 1;
+    text-align: left;
+}
+
+.modal-cart-product-info h2 {
+    font-size: 16px;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.modal-cart-product-price {
+    font-size: 14px;
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.remove-item-button img{
+    height: 10px;
+    width: auto;
+}
+
+.remove-item-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.remove-item-button:hover {
+    background-color: #c0392b;
+}
+
 
 @keyframes fadeIn {
     from { opacity: 0; transform: scale(0.9); }
     to { opacity: 1; transform: scale(1); }
 }
+
+
+/* 
+
+css, html, js vanilla :)
+
+by https://dev.arturoiwnl.pro/ 
+
+*/
