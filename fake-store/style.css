@@ -121,13 +121,9 @@ body {
     opacity: 1;
 }
 
-.product-info {
-    padding: 1.2rem;
-}
+.product-info {padding: 1.2rem;}
 
-.product-info >p{
-    text-align: center;
-}
+.product-info > p {text-align: center;}
 
 .product-title {
     font-size: 1.1rem;
