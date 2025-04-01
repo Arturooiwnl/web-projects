@@ -1,0 +1,187 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con pasos multiples - proyect #3</title>
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="error">
+            <div class="error__icon">
+                <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m13 13h-2v-6h2zm0 4h-2v-2h2zm-1-15c-1.3132 0-2.61358.25866-3.82683.7612-1.21326.50255-2.31565 1.23915-3.24424 2.16773-1.87536 1.87537-2.92893 4.41891-2.92893 7.07107 0 2.6522 1.05357 5.1957 2.92893 7.0711.92859.9286 2.03098 1.6651 3.24424 2.1677 1.21325.5025 2.51363.7612 3.82683.7612 2.6522 0 5.1957-1.0536 7.0711-2.9289 1.8753-1.8754 2.9289-4.4189 2.9289-7.0711 0-1.3132-.2587-2.61358-.7612-3.82683-.5026-1.21326-1.2391-2.31565-2.1677-3.24424-.9286-.92858-2.031-1.66518-3.2443-2.16773-1.2132-.50254-2.5136-.7612-3.8268-.7612z" fill="#393a37"></path></svg>
+            </div>
+            <div id="error-message" class="error__title"></div>
+        </div>
+        <div class="sidebar">
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-info">
+                    <span class="step-label">PASO 1</span>
+                    <span class="step-title">TU INFORMACIÓN</span>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-info">
+                    <span class="step-label">PASO 2</span>
+                    <span class="step-title">SELECCIONA EL PLAN</span>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-info">
+                    <span class="step-label">PASO 3</span>
+                    <span class="step-title">COMPLEMENTOS</span>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">4</div>
+                <div class="step-info">
+                    <span class="step-label">PASO 4</span>
+                    <span class="step-title">RESUMEN</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <form id="multi-step-form">
+                <div class="step" data-step="1">
+                    <h2>Informacón personal</h2>
+                    <p>Proporcione su nombre, dirección de correo electrónico y número de teléfono.</p>
+                    
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" required placeholder="Tu nombre aquí">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Dirección de correo electrónico</label>
+                        <input type="email" id="email" name="email" required placeholder="Tu email aquí">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Número de teléfono</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="Tu número aquí">
+                    </div>
+                </div>
+
+                <div class="step" data-step="2">
+                    <h2>Selecciona tu Plan</h2>
+                    <p>Tiene la opción de facturación mensual o anual.</p>
+                    
+                    <div class="plan-options">
+                        <div class="plan-card" data-plan="arcade">
+                            <svg class="plan-icon" viewBox="0 0 40 40">
+                                <rect width="40" height="40" rx="8" fill="#ffaf7e"/>
+                                <path d="M20.5 6l-6 6v3h3l6-6-3-3z" fill="#fff"/>
+                            </svg>
+                            <h3>Arcade</h3>
+                            <p class="price">$9/mes</p>
+                            <p class="yearly-price hidden">$90/año</p>
+                            <p class="yearly-bonus hidden">2 meses gratis</p>
+                        </div>
+                        
+                        <div class="plan-card" data-plan="advanced">
+                            <svg class="plan-icon" viewBox="0 0 40 40">
+                                <rect width="40" height="40" rx="8" fill="#f9818e"/>
+                                <path d="M20 7l8 8-8 8-8-8 8-8z" fill="#fff"/>
+                            </svg>
+                            <h3>Advanced</h3>
+                            <p class="price">$12/mes</p>
+                            <p class="yearly-price hidden">$120/yr</p>
+                            <p class="yearly-bonus hidden">2 meses gratis</p>
+                        </div>
+                        
+                        <div class="plan-card" data-plan="pro">
+                            <svg class="plan-icon" viewBox="0 0 40 40">
+                                <rect width="40" height="40" rx="8" fill="#483eff"/>
+                                <path d="M26 14l-8 8-4-4" stroke="#fff" stroke-width="2" fill="none"/>
+                            </svg>
+                            <h3>Pro</h3>
+                            <p class="price">$15/mes</p>
+                            <p class="yearly-price hidden">$150/año</p>
+                            <p class="yearly-bonus hidden">2 meses gratis</p>
+                        </div>
+                    </div>
+
+                    <div class="billing-toggle">
+                        <span class="monthly active">Mensual</span>
+                        <label class="switch">
+                            <input type="checkbox" id="billing-toggle">
+                            <span class="slider"></span>
+                        </label>
+                        <span class="yearly">Anual</span>
+                    </div>
+                </div>
+
+                <div class="step" data-step="3">
+                    <h2>Elige complementos</h2>
+                    <p>Los complementos ayudan a mejorar tu experiencia de juego.</p>
+                    
+                    <div class="addon-options">
+                        <div class="addon-card">
+                            <input type="checkbox" id="online-service">
+                            <div class="addon-info">
+                                <h3>Servicios anticipados</h3>
+                                <p>Acceso anticipado a servicios y juegos nuevos</p>
+                            </div>
+                            <p class="addon-price">+$1/mes</p>
+                        </div>
+
+                        <div class="addon-card">
+                            <input type="checkbox" id="larger-storage">
+                            <div class="addon-info">
+                                <h3>Almacenamiento más grande</h3>
+                                <p>1 TB adicional de almacenamiento en la nube</p>
+                            </div>
+                            <p class="addon-price">+$2/mes</p>
+                        </div>
+
+                        <div class="addon-card">
+                            <input type="checkbox" id="custom-profile">
+                            <div class="addon-info">
+                                <h3>Perfil personalizable</h3>
+                                <p>Tema personalizado en tu perfil</p>
+                            </div>
+                            <p class="addon-price">+$2/mes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step" data-step="4">
+                    <h2>Terminando</h2>
+                    <p>Verifique nuevamente que todo esté bien antes de confirmar.</p>
+
+                    <div class="summary-container">
+                        <div class="plan-summary">
+                            <div class="selected-plan">
+                                <h3>Arcade (Mensual)</h3>
+                                <a href="#" class="change-plan">Cambiar</a>
+                            </div>
+                            <p class="plan-price">$9/mes</p>
+                        </div>
+
+                        <div class="addons-summary"></div>
+
+                        <div class="total-summary">
+                            <span>Total (per month)</span>
+                            <span class="total-price">$12/mo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="button" class="btn-back" style="display: none;" title="Volver al paso anterior">Volver</button>
+                    <button type="button" class="btn-next" title="Ir al siguiente paso">Siguente Paso</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
