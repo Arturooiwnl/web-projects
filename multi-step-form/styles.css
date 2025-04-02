@@ -9,6 +9,7 @@
     --magnolia: #f0f6ff;
     --alabaster: #fafbff;
     --white: #ffffff;
+    --backgroud-gradient: linear-gradient(45deg, rgba(37,99,235,1) 38%, rgba(0,143,241,1) 91%);
 }
 
 * {
@@ -20,7 +21,8 @@
 body {
     font-family: 'Ubuntu', sans-serif;
     font-size: 16px;
-    background-color: var(--magnolia);
+    background: rgb(37,99,235);
+    background: var(--backgroud-gradient);
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -364,4 +366,74 @@ margin-left: auto;
 
 .error__close path {
 fill: #71192F;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 16px;
+        min-height: auto;
+        margin: 5px;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 16px;
+        border-radius: 10px;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    .plan-options {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .btn-back,
+    .btn-next {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .step-number {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+    }
+
+    .step-label {
+        font-size: 10px;
+    }
+
+    .plan-card {
+        padding: 16px;
+    }
+
+    .addon-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .addon-info {
+        margin-left: 0;
+        margin-top: 8px;
+    }
+
+    .billing-toggle {
+        flex-direction: column;
+        gap: 12px;
+    }
 }
