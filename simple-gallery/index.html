@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Fotos - proyect #4</title>
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="gallery">
+        <div class="thumbnails">
+            <img src="https://picsum.photos/400/300?random=1" alt="Imagen 1" onclick="openModal(0)">
+            <img src="https://picsum.photos/400/300?random=2" alt="Imagen 2" onclick="openModal(1)">
+            <img src="https://picsum.photos/400/300?random=3" alt="Imagen 3" onclick="openModal(2)">
+            <img src="https://picsum.photos/400/300?random=4" alt="Imagen 4" onclick="openModal(3)">
+            <img src="https://picsum.photos/400/300?random=5" alt="Imagen 5" onclick="openModal(4)">
+            <img src="https://picsum.photos/400/300?random=6" alt="Imagen 6" onclick="openModal(5)">
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <span class="nav prev" onclick="changeImage(-1)">&#10094;</span>
+        <span class="nav next" onclick="changeImage(1)">&#10095;</span>
+        <img id="modal-img" src="" alt="Imagen en pantalla completa">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
