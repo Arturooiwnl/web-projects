@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de Tarjeta Interactivo - proyect #5</title>
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        :root{
+            --fontSpace: 'Space Grotesk', sans-serif;
+        }
+
+        body{
+            font-family: var(--fontSpace);
+            background-color: #727272;
+        }
+        
+        .card-front{
+            position: relative;
+            border: red solid 1px;
+            width: fit-content;
+        }
+        .card-back{
+            position: relative;
+            border: red solid 1px;
+            width: fit-content;
+        }
+
+    </style>
+
+</head>
+<body>
+    <section class="card-container">
+        <div class="card-front">
+            <img src="assets/images/card-front.png" alt="Vista frontal de la tarjeta">
+            <div class="card-logo"><img src="assets/images/card-logo.svg" alt=""></div>
+            <div class="card-number">0000 0000 0000 0000</div>
+            <div class="card-name">jhon doe</div>
+            <div class="card-expiration">00/00</div>
+        </div>
+        <div class="card-back">
+            <img src="assets/images/card-back.png" alt="Vista trasera de la tarjeta">
+            <div class="cvv">000</div>
+        </div>
+    </section>
+</body>
+</html>
