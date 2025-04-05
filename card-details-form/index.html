@@ -3,65 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalles de Tarjeta Interactivo - proyect #5</title>
+    <title>Formulario de Tarjeta Interactivo - project #5-</title>
     <link rel="icon" href="assets/logo.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <main class="container">
-        <aside class="card-container">
-            <div class="card-front">
-                <img src="assets/images/card-front.png" alt="Vista frontal de la tarjeta">
-                <div class="card-info-front">
-                    <div class="card-logo"><img src="assets/images/card-logo.svg" alt=""></div>
-                    <h2 class="card-number">0000 0000 0000 0000</h2>
-                    <p class="card-expiration">00/00</p>
-                    <p class="card-name">jhon doe</p>
+        <div class="cards">
+            <div class="card front">
+                <div class="card-logo">
+                    <img src="assets/images/card-logo.svg" alt="logo tarjeta">
+                </div>
+                <div class="card-number">0000 0000 0000 0000</div>
+                <div class="card-details">
+                    <span class="card-holder">JHON DOE</span>
+                    <span class="expiry">00/00</span>
                 </div>
             </div>
-            <div class="card-back">
-                <img src="assets/images/card-back.png" alt="Vista trasera de la tarjeta">
-                <div class="card-info-back">
-                    <div class="cvv">000</div>
+            <div class="card back">
+                <div class="card-cvc">000</div>
+            </div>
+        </div>
+
+        <form class="card-form" id="cardForm">
+            <div class="form-group">
+                <label for="cardHolder">NOMBRE DEL TITULAR</label>
+                <input type="text" id="cardHolder" placeholder="ej. Jhon Doe" required>
+                <span class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="cardNumber">NÚMERO DE TARJETA</label>
+                <input type="text" id="cardNumber" placeholder="ej. 1234 5678 9123 0000" maxlength="19" required>
+                <span class="error-message"></span>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group expiry-group">
+                    <label>FECHA DE CADUCIDAD (MM/YY)</label>
+                    <div class="expiry-inputs">
+                        <input type="text" id="month" placeholder="MM" maxlength="2" required>
+                        <input type="text" id="year" placeholder="YY" maxlength="2" required>
+                    </div>
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="cvc">CVC</label>
+                    <input type="text" id="cvc" placeholder="ej. 123" maxlength="3" required>
+                    <span class="error-message"></span>
                 </div>
             </div>
-        </aside>
 
-        <section class="form-container">
-            <form id="card-form">
-                <div class="input-group">
-                    <label for="name">Nombre del titular</label>
-                    <input type="text" id="name" placeholder="e.g. John Doe" maxlength="30" required>
-                </div>
-
-                <div class="input-group">
-                    <label for="number">Número de tarjeta</label>
-                    <input type="text" id="number" placeholder="e.g. 1234 5678 9123 0000" maxlength="19" required>
-                </div>
-
-                <div class="form-row">
-                    <div class="input-group expiry">
-                        <label>Fecha de expiración (MM/YY)</label>
-                        <div class="expiry-inputs">
-                            <input type="text" id="month" placeholder="MM" maxlength="2" required>
-                            <input type="text" id="year" placeholder="YY" maxlength="2" required>
-                        </div>
-                    </div>
-
-                    <div class="input-group">
-                        <label for="cvv">CVV</label>
-                        <input type="text" id="cvv" placeholder="e.g. 123" maxlength="3" required>
-                    </div>
-                </div>
-
-                <button type="submit">Confirmar</button>
-            </form>
-        </section>
+            <button type="submit">Confirmar</button>
+        </form>
     </main>
-
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,274 @@
+:root {
+    --fontSpace: 'Space Grotesk', sans-serif;
+    --purple: #6448fe;
+    --light-purple: #8d69f1;
+    --white: #ffffff;
+    --error: #ff5252;
+    --input-border: #dedddf;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fontSpace);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, var(--purple), var(--light-purple));
+}
+
+.container {
+    display: flex;
+    gap: 8rem;
+    max-width: 1200px;
+    width: 100%;
+    padding: 2rem;
+}
+
+.cards {
+    position: relative;
+    min-width: 350px;
+}
+
+.card {
+    position: absolute;
+    width: 350px;
+    height: 200px;
+    border-radius: 10px;
+    padding: 20px;
+    color: var(--white);
+    transition: transform 0.5s ease;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.card.front {
+    background: url('assets/images/card-front.png') no-repeat center/cover;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    transform: rotateY(0deg);
+}
+
+.card.back {
+    background: url('assets/images/card-back.png') no-repeat center/cover;
+    transform: translateY(60px) rotateY(180deg);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.card-logo {
+    margin-bottom: 2rem;
+}
+
+.card-number {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.card-details {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.card-cvc {
+    position: absolute;
+    right: 40px;
+    top: 85px;
+    font-size: 0.9rem;
+}
+
+.card-form {
+    flex: 1;
+    max-width: 400px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--input-border);
+    border-radius: 8px;
+    font-family: var(--fontSpace);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--purple);
+}
+
+input.error {
+    border-color: var(--error);
+}
+
+.error-message {
+    color: var(--error);
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    display: none;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.expiry-inputs {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.expiry-inputs input {
+    width: 70px;
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(to right, var(--purple), var(--light-purple));
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    font-family: var(--fontSpace);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 900px) {
+    body {
+        padding-top: 4rem;
+        min-height: 100vh;
+        align-items: flex-start;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 8rem;
+        align-items: center;
+        padding-bottom: 4rem;
+    }
+
+    .cards {
+        width: 100%;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .card {
+        position: absolute;
+    }
+
+    .card.front {
+        transform: translateY(0);
+    }
+
+    .card.back {
+        transform: translateY(45px);
+    }
+
+    .card-form {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        padding-top: 2rem;
+    }
+
+    .container {
+        padding: 1rem;
+        gap: 6rem;
+    }
+
+    .cards {
+        height: 220px;
+        min-width: auto;
+    }
+
+    .card {
+        width: 280px;
+        height: 160px;
+        padding: 15px;
+    }
+
+    .card-logo {
+        width: 60px;
+        height: 35px;
+        margin-bottom: 1rem;
+    }
+
+    .card-number {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .card-details {
+        font-size: 0.8rem;
+    }
+
+    .card.back {
+        transform: translateY(35px);
+    }
+
+    .card-cvc {
+        top: 70px;
+        right: 30px;
+        font-size: 0.8rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .expiry-group, 
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .expiry-inputs input {
+        width: 65px;
+    }
+}
+
+@media (max-width: 350px) {
+    .card {
+        width: 260px;
+        height: 150px;
+    }
+
+    .card-number {
+        font-size: 1rem;
+    }
+}
