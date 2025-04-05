@@ -9,46 +9,60 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-
-    <style>
-
-        :root{
-            --fontSpace: 'Space Grotesk', sans-serif;
-        }
-
-        body{
-            font-family: var(--fontSpace);
-            background-color: #727272;
-        }
-        
-        .card-front{
-            position: relative;
-            border: red solid 1px;
-            width: fit-content;
-        }
-        .card-back{
-            position: relative;
-            border: red solid 1px;
-            width: fit-content;
-        }
-
-    </style>
-
 </head>
 <body>
-    <section class="card-container">
-        <div class="card-front">
-            <img src="assets/images/card-front.png" alt="Vista frontal de la tarjeta">
-            <div class="card-logo"><img src="assets/images/card-logo.svg" alt=""></div>
-            <div class="card-number">0000 0000 0000 0000</div>
-            <div class="card-name">jhon doe</div>
-            <div class="card-expiration">00/00</div>
-        </div>
-        <div class="card-back">
-            <img src="assets/images/card-back.png" alt="Vista trasera de la tarjeta">
-            <div class="cvv">000</div>
-        </div>
-    </section>
+    <main class="container">
+        <aside class="card-container">
+            <div class="card-front">
+                <img src="assets/images/card-front.png" alt="Vista frontal de la tarjeta">
+                <div class="card-info-front">
+                    <div class="card-logo"><img src="assets/images/card-logo.svg" alt=""></div>
+                    <h2 class="card-number">0000 0000 0000 0000</h2>
+                    <p class="card-expiration">00/00</p>
+                    <p class="card-name">jhon doe</p>
+                </div>
+            </div>
+            <div class="card-back">
+                <img src="assets/images/card-back.png" alt="Vista trasera de la tarjeta">
+                <div class="card-info-back">
+                    <div class="cvv">000</div>
+                </div>
+            </div>
+        </aside>
+
+        <section class="form-container">
+            <form id="card-form">
+                <div class="input-group">
+                    <label for="name">Nombre del titular</label>
+                    <input type="text" id="name" placeholder="e.g. John Doe" maxlength="30" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="number">Número de tarjeta</label>
+                    <input type="text" id="number" placeholder="e.g. 1234 5678 9123 0000" maxlength="19" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group expiry">
+                        <label>Fecha de expiración (MM/YY)</label>
+                        <div class="expiry-inputs">
+                            <input type="text" id="month" placeholder="MM" maxlength="2" required>
+                            <input type="text" id="year" placeholder="YY" maxlength="2" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" placeholder="e.g. 123" maxlength="3" required>
+                    </div>
+                </div>
+
+                <button type="submit">Confirmar</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
